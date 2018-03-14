@@ -1,7 +1,7 @@
 body{
     width: 100%;
     margin: 0px;
-    background-color: #663399;
+    
 }
 .leftnav{
     height: 700px;
@@ -17,6 +17,7 @@ body{
     float: left;
     color: white;
     display: block;
+    background-color: #663399;
 }
 header{
     padding-top: 30px;
@@ -55,13 +56,14 @@ header{
     border: 2px solid springgreen;
 }
 section{
-    width: 100%;
+    
     margin-top: 40px;
     padding-left: 30px;
     display: inline-block;
 }
 .block{
-
+    width: 15vw;
+    height: 15vw;
     margin: 10px;
     padding: 10px;
     background-color: #855CAD;
