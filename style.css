@@ -27,6 +27,7 @@ header{
 .topnav{
     width: 100%;
     clear: none;
+    display: inline-block;
 }
 #topnavleft{
     padding: 10px 0px 10px 40px;
@@ -56,18 +57,20 @@ header{
     border: 2px solid springgreen;
 }
 section{
-    
     margin-top: 40px;
     padding-left: 30px;
-    display: inline-block;
+    padding-right: 30px; 
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-around;
 }
 .block{
-    width: 15vw;
-    height: 15vw;
+    width: 250px;
+    height: 200px;
     margin: 10px;
     padding: 10px;
     background-color: #855CAD;
-    display: inline-block;
 }
 footer{
     padding-top: 80px;
