@@ -1,7 +1,7 @@
 body{
     width: 100%;
     margin: 0px;
-    
+    background-color: #AB8FC7;
 }
 .leftnav{
     height: 700px;
@@ -31,26 +31,34 @@ header{
 }
 #topnavleft{
     padding: 10px 0px 10px 40px;
+    height: 30px;
     float: left;
 }
 #topnavright{
     padding: 10px 40px 10px 0px;
+    height: 30px;
     float: right;
 }
 .navbtn1{
-    padding: 5px 5px 5px 5px;
+    height: inherit;
+    margin-right: 20px;
+    border: none;
+    font-size: 16px;
+    color: white;
+    background-color: inherit;
     display: inline-block;
-    -webkit-transition: border 2s; /* Safari */
-    transition: border 2s linear;
 }
 .navbtn1:hover{
     border-bottom: 2px solid #AB8FC7;
 }
 .navbtn2{
-    padding: 5px 5px 5px 5px;
+    height: inherit;
+    margin-left: 10px;
+    border: none;
+    font-size: 16px;
+    color: white;
+    background-color: inherit;
     display: inline-block;
-    -webkit-transition: color 2s, border 2s; /* Safari */
-    transition: color 2s, border 2s;
 }
 .navbtn2:hover{
     color: springgreen;
@@ -59,7 +67,7 @@ header{
 section{
     margin-top: 40px;
     padding-left: 30px;
-    padding-right: 30px; 
+    padding-right: 30px;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
