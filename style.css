@@ -31,38 +31,46 @@ header{
 }
 #topnavleft{
     padding: 10px 0px 10px 40px;
-    height: 30px;
+    height: 50px;
     float: left;
 }
 #topnavright{
     padding: 10px 40px 10px 0px;
-    height: 30px;
+    height: 50px;
     float: right;
 }
+#search{
+    height: 20px;
+    border: none;
+    background-color: #AB8FC7;
+}
+#search::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
 .navbtn1{
     height: inherit;
     margin-right: 20px;
     border: none;
-    font-size: 16px;
+    font-size: 20px;
     color: white;
     background-color: inherit;
+    cursor: pointer;
     display: inline-block;
-}
-.navbtn1:hover{
-    border-bottom: 2px solid #AB8FC7;
 }
 .navbtn2{
     height: inherit;
     margin-left: 10px;
     border: none;
-    font-size: 16px;
+    font-size: 20px;
     color: white;
     background-color: inherit;
+    cursor: pointer;
     display: inline-block;
 }
-.navbtn2:hover{
+.navbtn2:active{
     color: springgreen;
-    border: 2px solid springgreen;
 }
 section{
     margin-top: 40px;
@@ -74,8 +82,8 @@ section{
     justify-content: space-around;
 }
 .block{
-    width: 250px;
-    height: 200px;
+    width: 250px; /*view: l-100%  b-250px*/
+    height: 200px;/*view: l-100px b-200px*/
     margin: 10px;
     padding: 10px;
     background-color: #855CAD;
@@ -84,4 +92,37 @@ footer{
     padding-top: 80px;
     padding-left: 40px;
     background-color: rgb(65, 65, 65);
+}
+
+
+/*copy from http://ianlunn.github.io/Hover/ */
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #AB8FC7;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
 }
