@@ -22,7 +22,7 @@ body{
 header{
     padding-top: 30px;
     padding-left: 40px;
-    
+    animation: 0.5s ease-out 0s 1 slideInFromRight;
 }
 .topnav{
     width: 100%;
@@ -33,11 +33,13 @@ header{
     padding: 10px 0px 10px 40px;
     height: 50px;
     float: left;
+    animation: 0.5s ease-out 0s 1 slideInFromLeft;
 }
 #topnavright{
     padding: 10px 40px 10px 0px;
     height: 50px;
     float: right;
+    animation: 0.5s ease-out 0s 1 slideInFromLeft;
 }
 #search{
     height: 20px;
@@ -48,7 +50,10 @@ header{
     color: white;
     opacity: 1; /* Firefox */
 }
-
+#line{
+    margin: 0px 10px 0px 10px;
+    display: inline-block;
+}
 .navbtn1{
     height: inherit;
     margin-right: 20px;
@@ -72,6 +77,7 @@ header{
 .navbtn2:active{
     color: springgreen;
 }
+
 section{
     margin-top: 40px;
     padding-left: 30px;
@@ -80,6 +86,7 @@ section{
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: space-around;
+    animation: 0.5s ease-out 0s 1 slideInFromButtom;
 }
 .block{
     width: 250px; /*view: l-100%  b-250px*/
@@ -87,7 +94,12 @@ section{
     margin: 10px;
     padding: 10px;
     background-color: #855CAD;
+    transition: opacity 0.2s;
 }
+section:hover div:not(:hover) {
+  opacity: 0.2;
+}
+
 footer{
     padding-top: 80px;
     padding-left: 40px;
@@ -95,6 +107,35 @@ footer{
 }
 
 
+@keyframes slideInFromLeft {
+    0%{
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+@keyframes slideInFromRight {
+    0%{
+      opacity: 0;
+      transform: translateX(50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}@keyframes slideInFromButtom {
+    0%{
+      opacity: 0;
+      transform: translateY(20%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
 /*copy from http://ianlunn.github.io/Hover/ */
 /* Underline From Center */
 .hvr-underline-from-center {
